@@ -14,10 +14,10 @@
 return array(
 		// 数据库配置
 		'DB_TYPE' => 'mysql', // 数据库类型		
-		'DB_HOST' => 'localhost', // 服务器地址
-		'DB_NAME' => 'weiphp3.0', // 数据库名
-		'DB_USER' => 'root', // 用户名
-		'DB_PWD' => '', // 密码
+		'DB_HOST' => '10.9.1.188', // 服务器地址
+		'DB_NAME' => 'cf_f9519f86_0677_4dd7_91c5_4a6480a04630', // 数据库名
+		'DB_USER' => 'A1rIJHdFwSfyFDjE', // 用户名
+		'DB_PWD' => 'efhkOQ0bhcBrFZJr', // 密码
 		
 		'DB_PORT' => '3306', // 端口
 		'DB_PREFIX' => 'wp_', // 数据库表前缀
