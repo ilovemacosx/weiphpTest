@@ -80,6 +80,7 @@
             <if condition="$vo[is_admin]">
                 <a href="{:U('AuthManager/public_count?uid='.$vo['uid'])}">公众号设置</a>
                 <a href="{:U('ManagerMenu/lists',array('uid'=>$vo['uid']))}">导航管理</a>
+                <a href="{:U('User/resetPassword?uid='.$vo['uid'])}">重置密码</a>
             </if>    
                 <a href="{:U('AuthManager/group?uid='.$vo['uid'])}" class="confirm ajax-get">删除</a>
                 </td>

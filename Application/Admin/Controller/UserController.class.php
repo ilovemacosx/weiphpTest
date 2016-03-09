@@ -415,4 +415,34 @@ class UserController extends AdminController {
 	function menu() {
 		$this->disply ();
 	}
+	function resetPassword(){
+		$uid = I ( 'get.uid' );
+		if (! empty ( $uid )) {
+			$map ['uid'] = $uid;
+			$ucanter = M ( 'user' )->where ( $map )->find ();
+			$this->assign('userInfo',$ucanter);
+			$this->display();
+		}
+	}
+	function passwordReset(){
+		if (IS_POST) {
+			$uid = I('post.userId');
+			$data ['password'] = I ( 'post.newPassword' );
+			empty ( $data ['password'] ) && $this->error ( '请输入新密码' );
+			$repassword = I ( 'post.passwordAgain' );
+			empty ( $repassword ) && $this->error ( '请输入确认密码' );
+			
+			if ($data ['password'] !== $repassword) {
+				$this->error ( '您输入的新密码与确认密码不一致' );
+			}
+			
+			$res = D ( 'Common/User' )->updateUserFields ( $uid, $password, $data );
+			if ($res !== false) {
+				$this->success ( '修改密码成功！' );
+			} else {
+				$this->error ( $res ['info'] );
+			}
+			$this->display(index);
+		}
+	}
 }
