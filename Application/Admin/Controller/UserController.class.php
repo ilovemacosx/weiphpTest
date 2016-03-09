@@ -427,8 +427,9 @@ class UserController extends AdminController {
 	function passwordReset(){
 		if (IS_POST) {
 			$uid = I('post.userId');
+			dump($uid);
 			$data ['password'] = I ( 'post.newPassword' );
-			echo $data['password'];
+			dump($data['password']);
 			empty ( $data ['password'] ) && $this->error ( '请输入新密码' );
 			$repassword = I ( 'post.passwordAgain' );
 			empty ( $repassword ) && $this->error ( '请输入确认密码' );
