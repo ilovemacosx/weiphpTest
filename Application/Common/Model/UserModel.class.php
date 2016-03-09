@@ -358,6 +358,20 @@ class UserModel extends Model {
 		}
 		return false;
 	}
+        
+        public function updateUserPasswordFields($uid, $data) {
+		
+		// 更新用户信息
+		$data = $this->create ( $data );
+		if ($data) {
+			$res = $this->where ( array (
+					'uid' => $uid 
+			) )->save ( $data );
+			$this->getUserInfo ( $uid, true );
+			return $res;
+		}
+		return false;
+	}
 	
 	/**
 	 * 验证用户密码
