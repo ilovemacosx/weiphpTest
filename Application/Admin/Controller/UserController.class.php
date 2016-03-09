@@ -443,7 +443,6 @@ class UserController extends AdminController {
 			} else {
 				$this->error ( $res ['info'] );
 			}
-			$this->display(index);
 		}
 	}
 }
