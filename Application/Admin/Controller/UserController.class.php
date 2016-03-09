@@ -428,6 +428,7 @@ class UserController extends AdminController {
 		if (IS_POST) {
 			$uid = I('post.userId');
 			$data ['password'] = I ( 'post.newPassword' );
+			echo $data['password'];
 			empty ( $data ['password'] ) && $this->error ( '请输入新密码' );
 			$repassword = I ( 'post.passwordAgain' );
 			empty ( $repassword ) && $this->error ( '请输入确认密码' );
