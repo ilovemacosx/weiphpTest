@@ -8,6 +8,8 @@ use Home\Model\WeixinModel;
  */
 class WeixinAddonModel extends WeixinModel{
 	function reply($dataArr, $keywordArr = array()) {
+		$this->replyText ( '欢迎来到我的世界-_-' );
+		/*
 		$param['token'] = get_token();
 		$param['openid'] = get_openid();
 		$url = addons_url('Suggestions://Suggestions/suggest',$param);
@@ -18,5 +20,6 @@ class WeixinAddonModel extends WeixinModel{
 			'Url' => $url
 			);
 		$res => $this->replyNews($articles);
+		*/
 	}
 }
