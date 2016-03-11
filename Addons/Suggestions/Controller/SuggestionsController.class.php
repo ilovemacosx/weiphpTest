@@ -36,7 +36,7 @@ class SuggestionsController extends AddonsController{
 		$this->assign($config);
 
 		$data['uid'] = $this->mid;
-		$user = M('member')->where($data)->find();
+		$user = M('user')->where($data)->find();
 		$this->assign('user',$user);
 
 		if (IS_POST){
@@ -49,7 +49,7 @@ class SuggestionsController extends AddonsController{
 				$member['mobile'] = $mobile;
 			}
 			if (!empty($member)){
-				M('member')->where($data)->save($member);
+				M('user')->where($data)->save($member);
 			}
 			$data['cTime'] = time();
 			$data['content'] = I('content');
