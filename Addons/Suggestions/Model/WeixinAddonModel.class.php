@@ -14,12 +14,13 @@ class WeixinAddonModel extends WeixinModel{
 		$param['openid'] = get_openid();
 		$url = addons_url('Suggestions://Suggestions/suggest',$param);
 				*/
-		$articles[0] = array(
-			'Title' => '建议意见',
-			'Description' => '点击进入填写反馈内容',
-			'PicUrl' => 'http://weiphp.cn/Public/Home/images/about/logo.jpg',
-			'Url' => 'http://www.bing.com'
-			);
-		$res => $this->replyNews($articles);
+		$articles = array(
+						array(
+							'Title' => '建议意见',
+							'Description' => '点击进入填写反馈内容',
+							'PicUrl' => 'http://weiphp.cn/Public/Home/images/about/logo.jpg',
+							'Url' => 'http://www.bing.com'
+							));
+		$res = $this->replyNews($articles);
 	}
 }
