@@ -17,7 +17,7 @@ class SuggestionsController extends AddonsController{
 					'in',
 					$uids
 			);
-			$members = M('member')->where($map)->field('uid,nickname,truename,mobile')->select();
+			$members = M('user')->where($map)->field('uid,nickname,truename,mobile')->select();
 			foreach ($members as $m) {
 				!empty($m['truename']) || $m['truename'] = $m['nickname'];
 				$user[$m['uid']] = $m;
