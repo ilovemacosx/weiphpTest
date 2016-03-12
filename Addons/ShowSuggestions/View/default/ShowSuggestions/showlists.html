@@ -1,18 +1,20 @@
 <include file="Public/mobile_head" />
+<link rel="stylesheet" type="text/css" href="{:ADDON_PUBLIC_PATH}/showlist.css" media="all">
+
 <body>
 	<div class="container body">
-		<table style="border: 1px solid #CCAACC;">
+		<table class="tableStyle">
 			<tbody>
 				<tr>
-					<th>序号</th>
-					<th>内容</th>
-					<th>提交时间</th>
+					<th class="tdStyle">序号</th>
+					<th class="tdStyle">内容</th>
+					<th class="tdStyle">提交时间</th>
 				</tr>
 				<volist name="list" id="vo">
 					<tr>
-						<td>{$vo.id}</td>
-						<td>{$vo.content}</td>
-						<td>{$vo.add_time_name}</td>
+						<td class="tdStyle">{$vo.id}</td>
+						<td class="tdStyle">{$vo.content}</td>
+						<td class="tdStyle">{$vo.add_time_name}</td>
 					</tr>
     			</volist>
 			</tbody>
