@@ -1,9 +1,23 @@
 <include file="Public/mobile_head" />
 <body>
 	<div class="container body">
-		 <volist name="list" id="vo">
-    		<p>{$vo.id}:{$vo.content},{$vo.add_time_name}<br/></p>
-    	</volist>
+		<table style="border: 1px solid #CCAACC;">
+			<tbody>
+				<tr>
+					<th>序号</th>
+					<th>内容</th>
+					<th>提交时间</th>
+				</tr>
+				<volist name="list" id="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.content}</td>
+						<td>{$vo.add_time_name}</td>
+					</tr>
+    			</volist>
+			</tbody>
+		</table>
+
 		<p class="copyright">2016&copy;无有形</p>
 	</div>
 </body>

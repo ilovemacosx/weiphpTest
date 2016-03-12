@@ -9,7 +9,6 @@ class ShowSuggestionsController extends AddonsController{
 		$suggestions = M('suggestions a')->where($data)
 						->field("a.*,FROM_UNIXTIME(a.cTime,'%Y-%m-%d %H:%i') as add_time_name")
 						->select();
-		dump($suggestions);
 		$this->assign('list',$suggestions);
 		$this->display();
 	}
