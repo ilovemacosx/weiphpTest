@@ -10,7 +10,7 @@ class WeixinAddonModel extends WeixinModel{
 	function reply($dataArr, $keywordArr = array()) {
 		$param['token'] = get_token();
 		$param['openid'] = get_openid();
-		$url = addons_url('Suggestions://Suggestions/suggest',$param);
+		$url = addons_url('ShowSuggestions://ShowSuggestions/showlists',$param);
 		$articles = array(
 						array(
 							'Title' => '建议意见',
