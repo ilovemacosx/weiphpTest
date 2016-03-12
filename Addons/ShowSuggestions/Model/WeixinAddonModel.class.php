@@ -13,7 +13,7 @@ class WeixinAddonModel extends WeixinModel{
 		$url = addons_url('ShowSuggestions://ShowSuggestions/showlists',$param);
 		$articles = array(
 						array(
-							'Title' => '建议意见',
+							'Title' => '显示建议意见',
 							'Description' => '点击进入填写反馈内容',
 							'PicUrl' => 'http://weiphp.cn/Public/Home/images/about/logo.jpg',
 							'Url' => $url

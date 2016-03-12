@@ -1,10 +1,8 @@
 <include file="Public/mobile_head" />
-<link rel="stylesheet" type="text/css" href="{:ADDON_PUBLIC_PATH}/suggest.css" media="all">
-
 <body>
 	<div class="container body">
 		 <volist name="suggestions" id="vo">
-    		<div>{$vo.id}:{$vo.content},{$vo.cTime}<br/></div>
+    		<p>{$vo.id}:{$vo.content},{$vo.cTime}<br/></p>
     	</volist>
 		<p class="copyright">2016&copy;无有形</p>
 	</div>
