@@ -1,7 +1,7 @@
 $(function() {
 	"use strict";
 
-	$('#content').artEditor({
+	$('#contentInput').artEditor({
 		imgTar: '#imageUpload',
 		limitSize: 5,   // 兆
 		showServer: false,
