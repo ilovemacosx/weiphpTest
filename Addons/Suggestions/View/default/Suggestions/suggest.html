@@ -40,7 +40,14 @@
 	</div>
 	<?php echo '__STATIC__'; ?>
 	<script src="__STATIC__/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript">
+		var value1=$('#contentInput').val();
+		value1=value1.replace('<br />','/n');
+		$('#contentInput').val(value1);
+	</script>
+	<!--
 	<script src="__STATIC__/artEditor/artEditor.min.js"></script>
 	<script src="__STATIC__/artEditor/index.js"></script>
+	-->
 </body>
 </html>
